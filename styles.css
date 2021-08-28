@@ -39,7 +39,7 @@ h1 {
   color: var(--White);
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 1.4rem;
 }
 h2 {
@@ -89,9 +89,6 @@ p {
   margin-bottom: -1.2rem;
 }
 @media screen and (min-width: 710px) {
-  h1 {
-    font-size: 1.8rem;
-  }
   h2 {
     font-size: 1.5rem;
   }
