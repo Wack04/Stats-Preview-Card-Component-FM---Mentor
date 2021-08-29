@@ -45,14 +45,14 @@ h1 {
 h2 {
   color: var(--White);
   font-family: "Inter", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   /* margin-bottom: 0.1rem; */
 }
 p {
   color: var(--Slightly-transparent-white-para);
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6rem;
   margin-bottom: 1.2rem;
 }
@@ -66,28 +66,35 @@ p {
 }
 
 /* Card Image */
-.card__image {
+.card__image__mobile {
+  background-image: url(./images/image-header-mobile.jpg);
   width: 100%;
+  height: 14rem;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Card Content */
 .card__content {
   padding: 2.6rem 0;
 }
-#card__content--purple {
-  color: var(--Soft-violet);
-}
 .card__content__text {
   margin-bottom: 3rem;
 }
-.card__content__stats > p {
-  color: var(--Slightly-transparent-white-heading);
-  text-transform: uppercase;
-  font-size: 0.78rem;
+#card__content--purple {
+  color: var(--Soft-violet);
 }
 .card__content__stats {
   margin-bottom: -1.2rem;
 }
+.card__content__stats > span > p {
+  color: var(--Slightly-transparent-white-heading);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+/* Media Query */
+/* 710 -  Width(Tablet) */
 @media screen and (min-width: 710px) {
   h2 {
     font-size: 1.5rem;
@@ -98,10 +105,50 @@ p {
   .card {
     width: 26rem;
   }
+  .card__image {
+    height: 16rem;
+  }
 }
+
+/* 874 - Width(Desktop) */
 @media screen and (min-width: 874px) {
+  body {
+    margin: 0;
+  }
+  h1,
+  h2,
+  p {
+    text-align: left;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
   .card {
+    width: 54rem;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
+  }
+  .card__image__mobile {
+    display: none;
+  }
+  .card__image__desktop {
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: 100% 100%;
+  }
+  .card__content__stats {
+    display: grid;
+    width: 76%;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+  }
+  .card__content__stats {
+    margin-bottom: -1.4rem;
   }
 }
